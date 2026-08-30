@@ -21,6 +21,7 @@ export default function HeroSlideshow() {
     return localizeGalleryImage(image, locale);
   });
   const [index, setIndex] = useState(0);
+  const [readyCount, setReadyCount] = useState(1);
 
   useEffect(() => {
     if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
@@ -28,25 +29,35 @@ export default function HeroSlideshow() {
     return () => clearInterval(id);
   }, []);
 
+  useEffect(() => {
+    if (readyCount >= SLIDE_SRCS.length) return;
+    // Stagger loading the remaining slides so they don't compete with the
+    // first (LCP) image for bandwidth on initial page load.
+    const id = setTimeout(() => setReadyCount((c) => c + 1), 2000);
+    return () => clearTimeout(id);
+  }, [readyCount]);
+
   return (
     <div className="absolute inset-0">
-      {SLIDES.map((slide, i) => (
-        <div
-          key={slide.src}
-          className={`absolute inset-0 transition-opacity duration-[1500ms] ease-in-out ${
-            i === index ? "opacity-100" : "opacity-0"
-          }`}
-        >
-          <Image
-            src={slide.src}
-            alt={slide.alt}
-            fill
-            priority={i === 0}
-            sizes="100vw"
-            className={`object-cover ${i === index ? "animate-kenburns" : ""}`}
-          />
-        </div>
-      ))}
+      {SLIDES.map((slide, i) =>
+        i < readyCount ? (
+          <div
+            key={slide.src}
+            className={`absolute inset-0 transition-opacity duration-[1500ms] ease-in-out ${
+              i === index ? "opacity-100" : "opacity-0"
+            }`}
+          >
+            <Image
+              src={slide.src}
+              alt={slide.alt}
+              fill
+              preload={i === 0}
+              sizes="100vw"
+              className={`object-cover ${i === index ? "animate-kenburns" : ""}`}
+            />
+          </div>
+        ) : null,
+      )}
 
       <div className="absolute bottom-6 left-1/2 z-10 flex -translate-x-1/2 gap-2">
         {SLIDES.map((slide, i) => (
