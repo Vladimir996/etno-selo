@@ -1,10 +1,8 @@
 -- Etno selo Raonica — šema baze
 -- Pokreće se preko backend/db/migrate.js (ili ručno u MySQL klijentu).
-
-CREATE DATABASE IF NOT EXISTS etno_selo_raonica
-  CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
-
-USE etno_selo_raonica;
+-- Napomena: baza se ne pravi ovde — konekcija (migrate.js) se već povezuje
+-- na bazu iz DB_NAME, jer hostovani provajderi (npr. Clever Cloud, Aiven)
+-- obično ne daju privilegiju CREATE DATABASE korisničkom nalogu.
 
 -- Brvnare (smeštajne jedinice)
 CREATE TABLE IF NOT EXISTS cabins (

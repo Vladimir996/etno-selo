@@ -2,8 +2,6 @@
 -- zauzetost (src/data/availability.ts), da bi ponašanje ostalo isto posle
 -- prebacivanja frontenda na backend.
 
-USE etno_selo_raonica;
-
 INSERT INTO cabins (slug, name, short_description, description, capacity, bedrooms, size_m2, price_from_eur) VALUES
 ('brvnara-bor', 'Brvnara "Bor"',
  'Prostrana brvnara sa pogledom na borovu šumu, idealna za porodice.',

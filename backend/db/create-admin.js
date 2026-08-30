@@ -22,6 +22,7 @@ async function run() {
     user: process.env.DB_USER || "root",
     password: process.env.DB_PASSWORD || "",
     database: process.env.DB_NAME || "etno_selo_raonica",
+    ssl: process.env.DB_CA_CERT ? { ca: process.env.DB_CA_CERT } : undefined,
   });
 
   const passwordHash = await bcrypt.hash(password, 10);
