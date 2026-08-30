@@ -3,6 +3,7 @@ import { hasLocale, NextIntlClientProvider } from "next-intl";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
 import { routing, type Locale } from "@/i18n/routing";
+import { SITE_URL } from "@/lib/site";
 import { bodyFont, headingFont } from "@/lib/fonts";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -19,9 +20,17 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale: locale as Locale, namespace: "Home" });
+  const path = locale === routing.defaultLocale ? "/" : `/${locale}`;
   return {
+    metadataBase: new URL(SITE_URL),
     title: t("heroTitle"),
     description: t("welcomeDescription"),
+    alternates: {
+      canonical: path,
+      languages: Object.fromEntries(
+        routing.locales.map((loc) => [loc, loc === routing.defaultLocale ? "/" : `/${loc}`]),
+      ),
+    },
   };
 }
 
