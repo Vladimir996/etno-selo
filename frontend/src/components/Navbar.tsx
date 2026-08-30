@@ -36,25 +36,26 @@ export default function Navbar() {
         scrolled ? "shadow-sm shadow-wood-900/5" : ""
       }`}
     >
-      <div className="mx-auto flex max-w-6xl items-center justify-between px-5 py-2">
-        <Link href="/" className="flex items-center" onClick={() => setOpen(false)}>
+      <div className="mx-auto flex max-w-6xl items-center justify-between gap-6 px-5 py-3">
+        <Link href="/" className="flex shrink-0 items-center" onClick={() => setOpen(false)}>
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src="/logo.svg" alt="Etno selo Raonica" className="h-20 w-20 shrink-0 sm:h-24 sm:w-24 md:h-28 md:w-28" />
+          <img src="/logo.svg" alt="Etno selo Raonica" className="h-20 w-20 sm:h-24 sm:w-24 md:h-28 md:w-28" />
         </Link>
 
-        <nav className="hidden items-center gap-8 md:flex">
+        <nav className="hidden items-center gap-9 md:flex">
           {links.map((link) => (
             <Link
               key={link.href}
               href={link.href}
-              className="text-sm font-medium text-forest-800 transition-colors hover:text-terracotta-600"
+              className="text-[15px] font-semibold tracking-wide text-forest-800 transition-colors hover:text-terracotta-600"
             >
               {link.label}
             </Link>
           ))}
+          <span className="h-6 w-px bg-wood-700/20" aria-hidden="true" />
           <Link
             href="/rezervacija"
-            className="rounded-full bg-forest-800 px-5 py-2.5 text-sm font-semibold text-cream-100 transition-colors hover:bg-forest-700"
+            className="rounded-full bg-forest-800 px-6 py-3 text-sm font-semibold text-cream-100 transition-colors hover:bg-forest-700"
           >
             {t("book")}
           </Link>
