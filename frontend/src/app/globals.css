@@ -1,0 +1,134 @@
+@import "tailwindcss";
+
+:root {
+  --background: #f7f2e9;
+  --foreground: #2b2621;
+
+  --color-forest-950: #1a2318;
+  --color-forest-900: #24301f;
+  --color-forest-800: #2f3e28;
+  --color-forest-700: #3d4f33;
+  --color-forest-600: #4d6440;
+
+  --color-wood-900: #3a2416;
+  --color-wood-800: #4e311d;
+  --color-wood-700: #6b4423;
+  --color-wood-600: #8a5a30;
+  --color-wood-500: #a9713d;
+
+  --color-cream-100: #fbf8f2;
+  --color-cream-200: #f7f2e9;
+  --color-cream-300: #efe6d5;
+
+  --color-terracotta-600: #b5502f;
+  --color-terracotta-700: #98402a;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+
+  --color-forest-950: var(--color-forest-950);
+  --color-forest-900: var(--color-forest-900);
+  --color-forest-800: var(--color-forest-800);
+  --color-forest-700: var(--color-forest-700);
+  --color-forest-600: var(--color-forest-600);
+
+  --color-wood-900: var(--color-wood-900);
+  --color-wood-800: var(--color-wood-800);
+  --color-wood-700: var(--color-wood-700);
+  --color-wood-600: var(--color-wood-600);
+  --color-wood-500: var(--color-wood-500);
+
+  --color-cream-100: var(--color-cream-100);
+  --color-cream-200: var(--color-cream-200);
+  --color-cream-300: var(--color-cream-300);
+
+  --color-terracotta-600: var(--color-terracotta-600);
+  --color-terracotta-700: var(--color-terracotta-700);
+
+  --font-sans: var(--font-body);
+  --font-serif: var(--font-heading);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-body), Arial, Helvetica, sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-heading), Georgia, serif;
+}
+
+.form-input {
+  width: 100%;
+  border-radius: 0.75rem;
+  border: 1px solid color-mix(in srgb, var(--color-wood-700) 20%, transparent);
+  background: var(--color-cream-100);
+  padding: 0.65rem 0.9rem;
+  font-size: 0.875rem;
+  color: var(--foreground);
+}
+
+.form-input:focus {
+  outline: 2px solid var(--color-forest-700);
+  outline-offset: 1px;
+}
+
+@keyframes kenburns {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.08);
+  }
+}
+
+.animate-kenburns {
+  animation: kenburns 8s ease-out forwards;
+}
+
+@keyframes hero-in {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-hero-in {
+  opacity: 0;
+  animation: hero-in 0.8s ease-out forwards;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.animate-fade-in {
+  animation: fade-in 0.3s ease-out;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
