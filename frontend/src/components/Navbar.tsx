@@ -36,13 +36,10 @@ export default function Navbar() {
         scrolled ? "shadow-sm shadow-wood-900/5" : ""
       }`}
     >
-      <div className="mx-auto flex max-w-6xl items-center justify-between px-5 py-4">
-        <Link href="/" className="flex items-center gap-2.5" onClick={() => setOpen(false)}>
+      <div className="mx-auto flex max-w-6xl items-center justify-between px-5 py-2">
+        <Link href="/" className="flex items-center" onClick={() => setOpen(false)}>
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src="/logo.svg" alt="" aria-hidden="true" className="h-10 w-10 shrink-0" />
-          <span className="font-serif text-xl font-semibold tracking-tight text-forest-900">
-            Etno selo <span className="text-terracotta-600">Raonica</span>
-          </span>
+          <img src="/logo.svg" alt="Etno selo Raonica" className="h-20 w-20 shrink-0 sm:h-24 sm:w-24 md:h-28 md:w-28" />
         </Link>
 
         <nav className="hidden items-center gap-8 md:flex">
