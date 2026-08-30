@@ -37,7 +37,9 @@ export default function Navbar() {
       }`}
     >
       <div className="mx-auto flex max-w-6xl items-center justify-between px-5 py-4">
-        <Link href="/" className="flex items-center gap-2" onClick={() => setOpen(false)}>
+        <Link href="/" className="flex items-center gap-2.5" onClick={() => setOpen(false)}>
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img src="/logo.svg" alt="" aria-hidden="true" className="h-10 w-10 shrink-0" />
           <span className="font-serif text-xl font-semibold tracking-tight text-forest-900">
             Etno selo <span className="text-terracotta-600">Raonica</span>
           </span>

@@ -7,7 +7,7 @@ Node.js/Express API sa MySQL bazom (testirano preko WAMP-a) za brvnare, dostupno
 1. Pokreni MySQL (npr. preko WAMP-a — podrazumevano `127.0.0.1:3306`, korisnik `root`, bez lozinke).
 2. `cp .env.example .env` i po potrebi izmeni pristupne podatke za bazu.
 3. `npm install`
-4. `npm run db:migrate` — kreira bazu `etno_selo_raonica`, sve tabele (`db/schema.sql`) i ubacuje početne podatke (`db/seed.sql`). Sigurno je pokrenuti više puta — ako `cabins` već ima podatke, seed se preskače.
+4. `npm run db:migrate` — kreira sve tabele (`db/schema.sql`) u bazi iz `DB_NAME` i ubacuje početne podatke (`db/seed.sql`). Baza mora već postojati (skripta je ne pravi — hostovani provajderi obično ne daju `CREATE DATABASE` privilegiju). Sigurno je pokrenuti više puta — ako `cabins` već ima podatke, seed se preskače.
 5. `npm run db:create-admin -- <korisnicko_ime> <lozinka>` — kreira admin nalog za prijavu na `/admin` (lozinka min. 8 karaktera). Pokreni ponovo sa istim korisničkim imenom da promeniš lozinku.
 6. `npm run dev` (nodemon, automatski restart) ili `npm start`.
 

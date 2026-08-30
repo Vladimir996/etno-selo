@@ -1,7 +1,5 @@
 # Zajedničko za frontend/ i backend/
 node_modules/
-.env
-.env.*
 .next/
 *.tsbuildinfo
 .DS_Store

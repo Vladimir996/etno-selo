@@ -1,0 +1,161 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000">
+  <title>Etno Selo Raonić</title>
+  <desc>Čist vektorski logo sa planinama, borovima, tradicionalnim kućicama i rekom.</desc>
+
+  <!-- Palette:
+       forest #173B2A, dark green #244D35, brown #76502E,
+       cream #F5EEDC, blue #4C9CB5, snow #FFFFFF
+  -->
+
+  <defs>
+    <clipPath id="sceneClip">
+      <path d="M170 170 Q500 105 830 170 L830 570 Q500 650 170 570 Z"/>
+    </clipPath>
+  </defs>
+
+  <!-- Shield -->
+  <path d="M500 55
+           L875 185
+           L875 625
+           Q875 820 500 935
+           Q125 820 125 625
+           L125 185 Z"
+        fill="#F5EEDC" stroke="#173B2A" stroke-width="18" stroke-linejoin="round"/>
+  <path d="M500 82
+           L848 202 L848 620
+           Q848 790 500 900
+           Q152 790 152 620
+           L152 202 Z"
+        fill="none" stroke="#173B2A" stroke-width="5" stroke-linejoin="round"/>
+
+  <!-- Landscape window -->
+  <path d="M170 170 Q500 105 830 170 L830 570 Q500 650 170 570 Z"
+        fill="#BBDCE5" stroke="#173B2A" stroke-width="5"/>
+
+  <g clip-path="url(#sceneClip)">
+    <!-- sky -->
+    <rect x="145" y="115" width="710" height="510" fill="#BBDCE5"/>
+
+    <!-- distant mountain -->
+    <path d="M105 390 L285 215 L355 285 L500 125 L650 290 L735 215 L900 405 L900 620 L105 620 Z"
+          fill="#58726B"/>
+    <!-- snow -->
+    <path d="M500 125 L450 205 L475 193 L500 210 L523 188 L550 207 Z
+             M285 215 L250 258 L280 246 L300 262 L322 244 L350 276 Z
+             M735 215 L700 260 L730 248 L750 265 L775 250 L800 278 Z"
+          fill="#FFFFFF"/>
+
+    <!-- nearer mountain -->
+    <path d="M80 470 L220 315 L315 405 L430 260 L520 365 L610 280 L770 435 L920 320
+             L920 630 L80 630 Z"
+          fill="#3E5D4C"/>
+    <path d="M430 260 L382 330 L415 316 L432 337 L458 319 L485 346 L520 365 Z
+             M610 280 L570 330 L600 318 L618 339 L642 320 L670 346 Z"
+          fill="#F8F7EF"/>
+
+    <!-- pine forest -->
+    <g fill="#173B2A">
+      <path d="M150 500 l35 -65 35 65 h-23 l23 40 h-70 l23-40z"/>
+      <path d="M215 500 l30 -58 30 58 h-19 l20 36 h-62 l20-36z"/>
+      <path d="M760 495 l34 -65 34 65 h-22 l22 42 h-68 l22-42z"/>
+      <path d="M815 510 l27 -52 27 52 h-17 l18 32 h-56 l18-32z"/>
+      <path d="M680 475 l25 -48 25 48 h-16 l17 31 h-52 l17-31z"/>
+      <path d="M310 485 l28 -54 28 54 h-18 l19 34 h-58 l19-34z"/>
+    </g>
+
+    <!-- meadow -->
+    <path d="M125 515 Q330 470 500 530 Q675 475 875 520 L900 640 L100 640 Z"
+          fill="#76985B"/>
+
+    <!-- river -->
+    <path d="M520 620
+             C475 585 455 560 480 535
+             C510 505 570 520 600 545
+             C635 575 610 598 565 615
+             C525 630 500 650 525 680
+             L700 680 L700 640
+             C620 625 600 600 625 575
+             C650 550 690 540 720 555
+             C680 585 670 605 710 620
+             C755 637 800 645 850 635
+             L850 690 L450 690 Z"
+          fill="#4C9CB5"/>
+
+    <!-- river highlights -->
+    <path d="M490 556 Q535 540 585 560 M520 590 Q570 575 610 588 M575 635 Q640 620 690 640"
+          fill="none" stroke="#D9F3F5" stroke-width="9" stroke-linecap="round"/>
+
+    <!-- left cabin -->
+    <g stroke="#5A3A21" stroke-width="5" stroke-linejoin="round">
+      <path d="M215 520 L215 435 L285 395 L355 435 L355 520 Z" fill="#C99A5B"/>
+      <path d="M198 440 L285 382 L372 440 L350 448 L285 405 L220 448 Z" fill="#76502E"/>
+      <rect x="270" y="465" width="32" height="55" fill="#5A3A21"/>
+      <rect x="235" y="450" width="25" height="25" fill="#BBDCE5"/>
+      <rect x="315" y="450" width="25" height="25" fill="#BBDCE5"/>
+    </g>
+
+    <!-- center cabin -->
+    <g stroke="#5A3A21" stroke-width="5" stroke-linejoin="round">
+      <path d="M410 525 L410 420 L500 375 L590 420 L590 525 Z" fill="#D2A568"/>
+      <path d="M390 425 L500 350 L610 425 L585 438 L500 380 L415 438 Z" fill="#76502E"/>
+      <rect x="482" y="465" width="38" height="60" fill="#5A3A21"/>
+      <rect x="435" y="440" width="28" height="27" fill="#BBDCE5"/>
+      <rect x="537" y="440" width="28" height="27" fill="#BBDCE5"/>
+    </g>
+
+    <!-- right cabin -->
+    <g stroke="#5A3A21" stroke-width="5" stroke-linejoin="round">
+      <path d="M625 525 L625 430 L705 390 L785 430 L785 525 Z" fill="#C99A5B"/>
+      <path d="M605 435 L705 365 L805 435 L782 447 L705 395 L628 447 Z" fill="#76502E"/>
+      <rect x="690" y="468" width="34" height="57" fill="#5A3A21"/>
+      <rect x="650" y="448" width="27" height="26" fill="#BBDCE5"/>
+      <rect x="735" y="448" width="27" height="26" fill="#BBDCE5"/>
+    </g>
+
+    <!-- wooden fences -->
+    <g fill="none" stroke="#76502E" stroke-width="10" stroke-linecap="round">
+      <path d="M620 515 L700 500 L780 510"/>
+      <path d="M635 490 L635 535 M700 478 L700 530 M765 485 L765 535"/>
+    </g>
+
+    <!-- foreground rocks -->
+    <g fill="#6E766A" stroke="#4C554B" stroke-width="3">
+      <ellipse cx="250" cy="565" rx="32" ry="16"/>
+      <ellipse cx="300" cy="575" rx="25" ry="13"/>
+      <ellipse cx="745" cy="575" rx="28" ry="14"/>
+    </g>
+  </g>
+
+  <!-- Text panel -->
+  <path d="M155 585 Q500 625 845 585 L845 805 Q500 865 155 805 Z"
+        fill="#F5EEDC" stroke="#173B2A" stroke-width="5"/>
+
+  <!-- decorative dots -->
+  <circle cx="265" cy="665" r="9" fill="#173B2A"/>
+  <circle cx="735" cy="665" r="9" fill="#173B2A"/>
+
+  <!-- ETNO SELO -->
+  <text x="500" y="690" text-anchor="middle"
+        font-family="Georgia, 'Times New Roman', serif"
+        font-size="52" font-weight="700" letter-spacing="8"
+        fill="#173B2A">ETNO SELO</text>
+
+  <path d="M300 713 H700" stroke="#173B2A" stroke-width="4"/>
+
+  <!-- RAONIĆ -->
+  <text x="500" y="785" text-anchor="middle"
+        font-family="Georgia, 'Times New Roman', serif"
+        font-size="96" font-weight="900" letter-spacing="2"
+        fill="#173B2A">RAONIĆ</text>
+
+  <!-- folk ornament -->
+  <g transform="translate(500 835)" fill="none" stroke="#173B2A" stroke-width="6" stroke-linejoin="round">
+    <path d="M-70 0 H-25 L0 25 L25 0 H70"/>
+    <path d="M-18 0 L0 -18 L18 0 L0 18 Z"/>
+    <path d="M-8 0 L0 -8 L8 0 L0 8 Z"/>
+  </g>
+
+  <!-- small side lines -->
+  <path d="M250 835 H410 M590 835 H750"
+        stroke="#173B2A" stroke-width="4" stroke-linecap="round"/>
+</svg>

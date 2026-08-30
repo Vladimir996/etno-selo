@@ -11,9 +11,13 @@ export default function Footer() {
     <footer className="border-t border-wood-700/15 bg-forest-950 text-cream-200">
       <div className="mx-auto grid max-w-6xl gap-10 px-5 py-14 sm:grid-cols-2 md:grid-cols-4">
         <div>
-          <p className="font-serif text-lg font-semibold text-cream-100">
-            Etno selo <span className="text-terracotta-600">Raonica</span>
-          </p>
+          <div className="flex items-center gap-2.5">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src="/logo.svg" alt="" aria-hidden="true" className="h-10 w-10 shrink-0" />
+            <p className="font-serif text-lg font-semibold text-cream-100">
+              Etno selo <span className="text-terracotta-600">Raonica</span>
+            </p>
+          </div>
           <p className="mt-3 text-sm leading-relaxed text-cream-200/70">{t("tagline")}</p>
         </div>
 
